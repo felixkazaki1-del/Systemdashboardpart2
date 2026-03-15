@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Dashboard</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="menuBtn" onclick="toggleSidebar()">☰</button>
+
+<div id="sidebar" class="sidebar">
+<h2>System</h2>
+<button onclick="showPage('dashboard')">Dashboard</button>
+<button onclick="showPage('alters')">Alters</button>
+<button onclick="showPage('timeline')">Switch Timeline</button>
+<button onclick="showPage('friends')">Friends</button>
+<button onclick="showPage('journal')">Journal</button>
+</div>
+
+<div class="main">
+
+<div id="dashboard" class="card">
+<h2>Currently Fronting</h2>
+<img id="frontAvatar" class="avatar">
+<p id="frontName">Nobody fronting</p>
+</div>
+
+<div id="alters" class="card">
+<h2>System Members</h2>
+<div id="alterList"></div>
+
+<h3>Add Alter</h3>
+<input id="nameInput" placeholder="Name">
+<input id="roleInput" placeholder="Role tag">
+<input id="avatarInput" type="file" accept="image/*">
+<button onclick="addAlter()">Add Alter</button>
+</div>
+
+<div id="timeline" class="card">
+<h2>Switch History</h2>
+<div id="history"></div>
+</div>
+
+<div id="friends" class="card">
+<h2>Friends</h2>
+<div id="friendList"></div>
+
+<h3>Add Friend</h3>
+<input id="friendNameInput" placeholder="Friend name">
+<button onclick="addFriend()">Add Friend</button>
+</div>
+
+<div id="journal" class="card">
+<h2>Journal</h2>
+<textarea id="journalBox"></textarea>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
